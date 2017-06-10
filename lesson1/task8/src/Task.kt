@@ -1,9 +1,11 @@
 fun sendMessageToClient(
         client: Client?, message: String?, mailer: Mailer
 ){
-    if (client?.personalInfo?.email != null && message != null) {
+    val email = client?.personalInfo?.email
+
+    if (email != null && message != null) {
         mailer.sendMessage(
-                client.personalInfo.email,
+                email,
                 message
         )
     }
