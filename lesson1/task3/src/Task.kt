@@ -1,1 +1,4 @@
-fun joinOptions(options: Collection<String>) = options.joinToString(TODO())
+fun joinOptions(options: Collection<String>) = options.joinToString(
+        prefix = "[",
+        postfix = "]"
+)
